@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="main.js"></script>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button id="incrementBtn">Increment</button>
+    <button id="resetBtn">Reset</button>
+
+    <form id="inputForm">
+      <input
+        type="text"
+        id="textInput"
+        placeholder="Enter at least 3 characters"
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+  </body>
 </html>
