@@ -7,6 +7,12 @@ const inputForm = document.getElementById("inputForm");
 const textInput = document.getElementById("textInput");
 const messageDiv = document.getElementById("message");
 
+function init() {
+  counterDisplay.textContent = increment();
+
+  //
+}
+
 incrementButton.addEventListener("click", () => {
   counterDisplay.textContent = increment();
 });
@@ -28,3 +34,5 @@ inputForm.addEventListener("submit", (event) => {
     messageDiv.style.color = "red";
   }
 });
+
+init();
