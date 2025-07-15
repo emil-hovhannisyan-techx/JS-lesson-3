@@ -28,4 +28,3 @@ inputForm.addEventListener("submit", (event) => {
     messageDiv.style.color = "red";
   }
 });
-
