@@ -9,8 +9,6 @@ const messageDiv = document.getElementById("message");
 
 function init() {
   counterDisplay.textContent = increment();
-
-  //
 }
 
 incrementButton.addEventListener("click", () => {
@@ -24,14 +22,27 @@ resetButton.addEventListener("click", () => {
 inputForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const InputValue = textInput.value.trim();
-  if (InputValue.length >= 3) {
-    messageDiv.textContent = `Welcome, ${InputValue}!`;
-    messageDiv.style.color = "black";
-    textInput.value = "";
-  } else {
-    messageDiv.textContent =
-      "Error: The input must be at the very least 3 characters long!";
+  // if (InputValue.length >= 3) {
+  //   messageDiv.textContent = `Welcome, ${InputValue}!`;
+  //   messageDiv.style.color = "black";
+  //   textInput.value = "";
+  // } else {
+  //   messageDiv.textContent =
+  //     "Error: The input must be at the very least 3 characters long!";
+  //   messageDiv.style.color = "red";
+  // }
+  try {
+    if (InputValue.length >= 3) {
+      messageDiv.textContent = `Welcome, ${InputValue}!( ๑ ˃̵ᴗ˂̵)و ♡`;
+      messageDiv.style.color = "black";
+    } else {
+      throw new Error(
+        "The input must be at the very least 3 characters long! °՞(ᗒᗣᗕ;)՞°"
+      );
+    }
+  } catch (error) {
     messageDiv.style.color = "red";
+    messageDiv.textContent = error;
   }
 });
 
