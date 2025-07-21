@@ -21,19 +21,10 @@ resetButton.addEventListener("click", () => {
 
 inputForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const InputValue = textInput.value.trim();
-  // if (InputValue.length >= 3) {
-  //   messageDiv.textContent = `Welcome, ${InputValue}!`;
-  //   messageDiv.style.color = "black";
-  //   textInput.value = "";
-  // } else {
-  //   messageDiv.textContent =
-  //     "Error: The input must be at the very least 3 characters long!";
-  //   messageDiv.style.color = "red";
-  // }
+  const inputValue = textInput.value.trim();
   try {
-    if (InputValue.length >= 3) {
-      messageDiv.textContent = `Welcome, ${InputValue}!( ๑ ˃̵ᴗ˂̵)و ♡`;
+    if (inputValue.length >= 3) {
+      messageDiv.textContent = `Welcome, ${inputValue}!( ๑ ˃̵ᴗ˂̵)و ♡`;
       messageDiv.style.color = "black";
     } else {
       throw new Error(
